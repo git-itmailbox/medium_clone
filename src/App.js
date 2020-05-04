@@ -2,9 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-     Welcome to hooks
-    </div>
+    <div className="App">Welcome to hooks</div>
   );
 }
 
