@@ -1,25 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import Routes from 'routes'
-import TopBar from 'components/topBar'
+import Routes from "routes";
+import TopBar from "components/topBar";
+import { CurrentUserProvider } from "contexts/currentUser";
 
 const App = () => {
   return (
-    <div>
+    <CurrentUserProvider>
       <Router>
         <TopBar />
         <Routes />
       </Router>
-
-    </div>
-  )
-}
+    </CurrentUserProvider>
+  );
+};
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
